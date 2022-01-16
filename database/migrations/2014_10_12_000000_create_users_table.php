@@ -22,7 +22,7 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->integer('language_id')->nullable()->index();
             $table->integer('country_id')->nullable()->index();
-            $table->integer('website_id')->index();
+            $table->integer('website_id')->nullable()->index();
             $table->boolean('is_company')->default(false);
             $table->json('extra')->nullable();
             $table->rememberToken();
