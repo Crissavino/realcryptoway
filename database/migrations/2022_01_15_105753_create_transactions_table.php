@@ -24,6 +24,9 @@ class CreateTransactionsTable extends Migration
             $table->boolean('is_trial_attempt')->default(false);
             $table->string('error_message')->nullable();
             $table->string('crypto_coin');
+            $table->string('crypto_amount');
+            $table->string('fiat_coin');
+            $table->string('fiat_amount');
             $table->softDeletes();
             $table->timestampsTz();
         });

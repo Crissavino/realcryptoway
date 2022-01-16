@@ -22,12 +22,6 @@ class CreateCompaniesTable extends Migration
             $table->timestampsTz();
         });
 
-        Schema::create('company_product', function (Blueprint $table) {
-            $table->id();
-            $table->integer('company_id')->index();
-            $table->integer('product_id')->index();
-            $table->timestamps();
-        });
     }
 
     /**
@@ -38,6 +32,5 @@ class CreateCompaniesTable extends Migration
     public function down()
     {
         Schema::dropIfExists('companies');
-        Schema::dropIfExists('company_product');
     }
 }

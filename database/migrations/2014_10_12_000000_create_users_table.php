@@ -26,7 +26,8 @@ class CreateUsersTable extends Migration
             $table->boolean('is_company')->default(false);
             $table->json('extra')->nullable();
             $table->rememberToken();
-            $table->timestamps();
+            $table->softDeletes();
+            $table->timestampsTz();
         });
     }
 
